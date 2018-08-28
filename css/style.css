@@ -1,13 +1,12 @@
-.token .selector {
-  color: black;
-  display: none
-}
-.token .function {
+.token.selector {
   color: black;
 }
-.token .punctuation {
+.token.function {
   color: black;
 }
-.token .property {
+.token.punctuation {
+  color: black;
+}
+.token.property {
   color: black;
 }

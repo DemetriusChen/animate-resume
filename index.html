@@ -6,91 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="vendor/prism.css" rel="stylesheet">
-    
+
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <style id="styleTag"></style>
-    
 </head>
 
 <body>
     <pre id="code"></pre>
 </body>
-<script src="vendor/prism.js"></script>
-<script>
-
-    var text = `
-/* 欢迎来看关于我的介绍，下面我来介绍一下我自己
- *先给页面加点颜色
- *我开始写点代码
- */  
-
-   *{
-        transition: all 1s ;
-    }
-    body {
-            background:#ddd;
-        }
-    #code{
-        padding:16px;
-        border:1px solid #666 ;
-    }
-
-/*弄个编辑器，让代码高亮起来吧
-*  
-*
-*/
-
-
-/*加点3D效果吧
-*那样看起来会舒服点
-*好，我先来写点代码实现
-*/
-    #code{
-        width:30%;
-        transform: rotate(360deg);
-    }
-
-    `;
-
-    var n = 0
-
-    var interval = setInterval(function () {
-        code.innerHTML = text.substring(0, n)
-        code.innerHTML = Prism.highlight(code.innerHTML, Prism.languages.css, "css")
-        styleTag.innerText = text.substring(0, n)
-        n++
-        if (n > text.length) {
-            clearInterval(interval)
-            fn2()
-            fn3()
-        }
-    }, 10)
-
-    function fn2(params) {
-        var paper = document.createElement('div')
-        paper.id = 'paper'
-        document.body.appendChild(paper)
-    }
-    function fn3(params) {
-        var result = `
-
-        #paper {
-            width:100px;
-            height:100px;
-            background:red;
-        }
-        `
-        var n = 0;
-        var interval = setInterval(() => {
-            n += 1
-            code.innerHTML = code.innerHTML + result[n - 1]
-            if (n >= result.length) {
-                window.clearInterval(interval)
-            }
-        }, 50)
-
-    }
-</script>
+<script src="./vendor/prism.js"></script>
+<script src="./js/main.js"></script>
 
 </html>
