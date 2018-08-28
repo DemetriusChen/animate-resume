@@ -1,0 +1,13 @@
+.token .selector {
+  color: black;
+  display: none
+}
+.token .function {
+  color: black;
+}
+.token .punctuation {
+  color: black;
+}
+.token .property {
+  color: black;
+}
