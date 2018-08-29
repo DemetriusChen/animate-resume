@@ -1,4 +1,16 @@
-.token.selector {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  list-style: none;
+}
+ul,
+ol {
+  list-style: none;
+}
+/* .token.selector {
   color: black;
 }
 .token.function {
@@ -9,4 +21,4 @@
 }
 .token.property {
   color: black;
-}
+} */
