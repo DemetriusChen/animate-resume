@@ -1,5 +1,5 @@
 /*把code写到#code和style标签里*/
-function writeCss(prefix, code, fn){
+function writeCode(prefix, code, fn){
   let domCode = document.querySelector('#code')
   let n = 0
   let id = setInterval(() => {
@@ -11,7 +11,7 @@ function writeCss(prefix, code, fn){
       window.clearInterval(id)
       fn && fn.call()
     }
-  }, 70)
+  }, 50)
 }
 function writeMarkdown(markdown, fn){
   let domPaper = document.querySelector('#paper>.content')
@@ -24,33 +24,37 @@ function writeMarkdown(markdown, fn){
       window.clearInterval(id)
       fn && fn.call()
     }
-  }, 35)
+  }, 25)
 }
 
-var css1 = `/* 
+var text1 = `/* 
  * 面试官你好，我是XXX
  * 只用文字作做我介绍太单调了
  * 我就用代码来介绍吧
- * 首先准备一些样式
  */
 
 *{
   transition: all 1s;
 }
-html{
-  background: #eee;
-}
+/*首先准备一些样式
+*加个编辑器吧
+*/
 #code{
+  background: rgb(40,44,52);
+  color:white;
   border: 1px solid #aaa;
   padding: 16px;
 }
 
+
 /* 我需要一点代码高亮 */
 
 .token.selector{ color: #690; }
-.token.property{ color: #905; }
+.token.property{ color: gold; }
+.token.function{ color: pink; }
+.token.punctuation{ color: white; }
 
-/* 加一个呼吸效果 */
+/* 加一个渐变效果 */
 
 #code{
   animation: breath 0.5s infinite alternate-reverse;
@@ -72,7 +76,7 @@ html{
 /* 于是我就可以在白纸上写字了，请看右边 */
 `
 
-var css2 = `
+var text2 = `
 /* 接下来用一个优秀的库 marked.js
  * 把 Markdown 变成 HTML
  */
@@ -147,19 +151,19 @@ XXX 学校毕业
 - Email xxxxxxxx
 - 手机 xxxxxxx
 `
-let css3 = `
+let text3 = `
 /*
  * 这就是我的会动的简历
  * 谢谢观看
  */
 `
 
-writeCss('', css1, ()=>{ // writeCss call the function
+writeCode('', text1, ()=>{ // writeCode call the function
   createPaper(() => {
     writeMarkdown(md, ()=> {
-      writeCss(css1, css2, ()=>{
+      writeCode(text1, text2, ()=>{
         convertMarkdownToHtml(()=>{
-          writeCss(css1 + css2, css3, ()=> {
+          writeCode(text1 + text2, text3, ()=> {
             console.log('完成')
           })
         })
