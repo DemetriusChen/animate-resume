@@ -28,7 +28,7 @@ function writeMarkdown(markdown, fn){
 }
 
 var text1 = `/* 
- * 面试官你好，我是XXX
+ * 面试官你好，我是陈远
  * 只用文字作做我介绍太单调了
  * 我就用代码来介绍吧
  */
@@ -47,7 +47,7 @@ var text1 = `/*
 }
 
 
-/* 我需要一点代码高亮 */
+/*稍等一下，我将代码高亮 */
 
 .token.selector{ color: #690; }
 .token.property{ color: gold; }
@@ -87,15 +87,15 @@ var text2 = `
 var md = `
 # 自我介绍
 
-我叫 XXX
-1990 年 1 月出生
+我叫 陈远
+
 XXX 学校毕业
 自学前端半年
 希望应聘前端开发岗位
 
 # 技能介绍
 
-熟悉 JavaScript CSS
+熟悉 JavaScript CSS Vue
 
 # 项目介绍
 
@@ -105,52 +105,11 @@ XXX 学校毕业
 
 # 联系方式
 
-- QQ xxxxxxxx
-- Email xxxxxxxx
+- QQ 3205561979
+- Email 3205561979@qq.com
 - 手机 xxxxxxx
 
-# 联系方式
 
-- QQ xxxxxxxx
-- Email xxxxxxxx
-- 手机 xxxxxxx
-
-# 联系方式
-
-- QQ xxxxxxxx
-- Email xxxxxxxx
-- 手机 xxxxxxx
-
-# 联系方式
-
-- QQ xxxxxxxx
-- Email xxxxxxxx
-- 手机 xxxxxxx
-
-# 联系方式
-
-- QQ xxxxxxxx
-- Email xxxxxxxx
-- 手机 xxxxxxx
-
-# 联系方式
-
-- QQ xxxxxxxx
-- Email xxxxxxxx
-- 手机 xxxxxxx
-
-# 联系方式
-
-- QQ xxxxxxxx
-- Email xxxxxxxx
-- 手机 xxxxxxx
-
-# 联系方式
-
-- QQ xxxxxxxx
-- Email xxxxxxxx
-- 手机 xxxxxxx
-`
 let text3 = `
 /*
  * 这就是我的会动的简历
