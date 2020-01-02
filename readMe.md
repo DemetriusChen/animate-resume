@@ -1,1 +1,1 @@
-[点我预览](https://easecy.github.io/animate-resume/index.html)
+[点我预览](https://DemetriusChen.github.io/animate-resume/index.html)
